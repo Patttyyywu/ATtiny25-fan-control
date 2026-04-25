@@ -1,7 +1,8 @@
 # ATtiny25 Fan Control
 
-This repository contains firmware for an **ATtiny25-based replacement design for the MIC502 fan management IC**.  
-The goal of this project is to reproduce the main MIC502 fan-control behavior using an ATtiny25 microcontroller, including temperature-based PWM control, minimum fan-speed clamp, startup drive, and overtemperature fault output.
+This repository contains firmware for an **ATtiny25-based replacement design for the MIC502 fan management IC**.
+
+The goal of this project is to reproduce the main MIC502 fan-control behavior using an ATtiny25 microcontroller, including temperature-based PWM control, minimum fan-speed clamp, startup drive, overtemperature fault output, and shutdown/reset behavior.
 
 ## Project Overview
 
@@ -28,18 +29,3 @@ On the ATtiny25, physical pin 1 is normally:
 
 ```text
 PB5 / RESET / ADC0
-
-## Implemented Features
-
-- VT1 analog temperature input using ADC0 on ATtiny25 physical pin 1
-- PWM duty-cycle control based on VT1 voltage
-- MIC502-style control-voltage mapping:
-  - 30% VDD → 0% PWM duty
-  - 70% VDD → 100% PWM duty
-- VT2 digital minimum-speed clamp using ATtiny25 physical pin 5
-- Clamp defaults ON after every power-up
-- Momentary push button toggles the clamp ON/OFF
-- Clamp ON behavior:
-
-```text
-PWM duty = max(VT1 duty, 25%)
