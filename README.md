@@ -1,10 +1,12 @@
 # ATtiny25 Fan Control
 
-This repository contains firmware for an **ATtiny25-based replacement design for the MIC502 fan management IC**.
+This repository contains hardware and firmware design for an **ATtiny25-based replacement design for the MIC502 fan management IC**.
 
 The goal of this project is to reproduce the main MIC502 fan-control behavior using an ATtiny25 microcontroller, including temperature-based PWM control, minimum fan-speed clamp, startup drive, overtemperature fault output, and shutdown/reset behavior.
 
 ## Project Overview
+
+The Hardware contains circuit design from schematic entry to PCB layout done in Altium Designer.
 
 The firmware reads a thermistor-conditioned voltage on the VT1 input and converts it into a PWM duty cycle for controlling a brushless DC fan through an external transistor or MOSFET driver.
 
