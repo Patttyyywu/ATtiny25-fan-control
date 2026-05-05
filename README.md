@@ -19,4 +19,4 @@ For this implementation, VT2 is simplified as a digital clamp input. When the VT
 - Compiler: AVR-GCC / XC8 AVR toolchain
 - Programming method: HVSP / High-Voltage Serial Programming
 - Clock: Internal 8 MHz oscillator
-- Supply voltage: 5 V nominal
+- Supply voltage: 24V
